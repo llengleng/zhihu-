@@ -5,7 +5,7 @@
  </div>
 </template>
 
-<style>
+<style scoped>
 	.page-body{
 		display: flex;
 		flex-direction: row;

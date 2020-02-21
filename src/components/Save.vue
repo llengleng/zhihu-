@@ -34,7 +34,7 @@
 		</div>
 		</div>
 		
-		<div class="news-more">
+		<div class="news-more" @click="moresavebutton()">
 			<span>查看更多收藏夹 ></span>
 		</div>
 		</div>
@@ -58,6 +58,9 @@
 				})
 				.catch(() => {})
 				.finally(() => {})
+			},
+			moresavebutton(){
+				this.$router.push("allsave");
 			}
 		},
 		mounted:function(){
@@ -67,7 +70,7 @@
 	}
 </script>
 
-<style>
+<style scoped>
 	.news-root{
 		width: 100%;
 		display: flex;
@@ -215,5 +218,6 @@
 		background: #FFFFFF;
 		border-radius: 20px;
 		color: #8590A6;
+		cursor: pointer;
 	}
 </style>

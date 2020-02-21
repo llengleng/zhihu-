@@ -45,7 +45,7 @@
 		</div>
 		</div>
 		
-		<div class="news-more">
+		<div class="news-more" @click="roundtableOnclick()">
 			<span>查看更多圆桌 ></span>
 		</div>
 		</div>
@@ -69,6 +69,9 @@
 				})
 				.catch(() => {})
 				.finally(() => {});
+			},
+			roundtableOnclick(){
+				this.$router.push("alltable");
 			}
 		},
 		mounted:function(){
@@ -78,7 +81,7 @@
 	}
 </script>
 
-<style>
+<style scoped>
 	.news-root{
 		width: 100%;
 		display: flex;
@@ -236,5 +239,6 @@
 		background: #FFFFFF;
 		border-radius: 20px;
 		color: #8590A6;
+		cursor: pointer;
 	}
 </style>

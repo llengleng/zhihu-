@@ -36,7 +36,7 @@
  </div>
 </template>
 
-<style>
+<style scoped>
 	.page-root{
 		min-width:1080px;
 	}
@@ -196,8 +196,7 @@
 	 		 height: 16px;
 	 		 background-color: #F1403C;
 	 		 border-radius: 8px;
-			 position: absolute;
-			 
+			 position: absolute;	 
 			 top: -6px;
 			 right: -15px;
 			 box-shadow: rgba(255,255,255) -1px 1px 0px;

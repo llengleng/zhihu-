@@ -16,7 +16,7 @@
 	</div>
 	</div>
 		
-		<div class="news-more">
+		<div class="news-more" @click="morespecial()">
 			<span>查看更多专栏 ></span>
 		</div>
 		</div>
@@ -40,6 +40,9 @@
 				})
 				.catch(() => {})
 				.finally(() => {})
+			},
+			morespecial(){
+				this.$router.push("allspecial");
 			}
 		},
 		mounted:function(){
@@ -49,7 +52,7 @@
 	}
 </script>
 
-<style>
+<style scoped>
 	.news-root{
 		width: 100%;
 		display: flex;
@@ -140,5 +143,6 @@
 		background: #FFFFFF;
 		border-radius: 20px;
 		color: #8590A6;
+		cursor: pointer;
 	}
 </style>

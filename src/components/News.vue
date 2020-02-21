@@ -33,7 +33,7 @@
 		</div>
 		</div>
 		
-		<div class="news-more">
+		<div class="news-more" @click="moreButtonClick()">
 			<span>查看更多专题 ></span>
 		</div>
 		</div>
@@ -57,6 +57,11 @@
 				 })
 				 .catch(() => {})
 				 .finally(() => {});
+			 },
+			 //定义一个点击跳转的方法
+			 moreButtonClick(){
+				 //调用路由方法，跳转到新路由。
+				 this.$router.push("allnews");
 			 }
 		},
 		mounted:function(){
@@ -66,7 +71,7 @@
 	}
 </script>
 
-<style>
+<style scoped>
 	.news-root{
 		width: 100%;
 		display: flex;
@@ -187,5 +192,6 @@
 		background: #FFFFFF;
 		border-radius: 20px;
 		color: #8590A6;
+		cursor: pointer;
 	}
 </style>
